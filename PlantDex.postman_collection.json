@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "f053a292-0999-411d-b603-c93772c2d6a7",
+		"name": "PlantDex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28025225"
+	},
+	"item": [
+		{
+			"name": "GET_ All-Plants",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ A Plant With ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "{{url}}e685852a-14f2-4198-97a2-a6c49e51db1b"
+			},
+			"response": []
+		},
+		{
+			"name": "POST_ New Plant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"e685852a-14f2-4198-97a2-a6c49e51db1b\",\r\n        \"nom\": \"Sansevieris Zeylanico : pot D17 x H60cm\",\r\n        \"soleil\": \"beaucoup\",\r\n        \"arrosage\": 0,\r\n        \"categorie\": \"cactus et plantes grasses\",\r\n        \"image\": \"https://images.truffaut.com/media/catalog/product/cdn:///Articles/jpg/0832000/832797_001.jpg\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_ A Plant With ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"e685852a-14f2-4198-97a2-a6c49e51db1b\",\r\n        \"nom\": \"Sansevierix Zeylanico : pot D17 x H60cm\",\r\n        \"soleil\": \"beaucoup\",\r\n        \"arrosage\": 1,\r\n        \"categorie\": \"cactus et plantes grasses\",\r\n        \"image\": \"https://images.truffaut.com/media/catalog/product/cdn:///Articles/jpg/0832000/832797_001.jpg\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}e685852a-14f2-4198-97a2-a6c49e51db1b"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_ A Plant With ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{url}}e685852a-14f2-4198-97a2-a6c49e51db1b"
+			},
+			"response": []
+		}
+	]
+}

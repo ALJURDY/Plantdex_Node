@@ -11,7 +11,7 @@ class PlanteController {
 
         try {
             const plantes = await this.planteService.getAll();
-            res.send({ status: "OK", data: plantes });
+            res.send({ status: "OK", plants: plantes });
         } catch (error) {
             res.status(500).send({ status: "Failed", message: error });
         }

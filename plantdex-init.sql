@@ -1,5 +1,7 @@
 -- Active: 1711548210445@@127.0.0.1@5432@plantdex
+CREATE DATABASE plantdex;
 DROP TABLE IF EXISTS  plantes;
+
 CREATE TABLE plantes(
    id        UUID  NOT NULL PRIMARY KEY
   ,nom       VARCHAR(62) NOT NULL

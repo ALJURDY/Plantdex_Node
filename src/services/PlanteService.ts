@@ -1,9 +1,9 @@
 import { UUID } from "typeorm/driver/mongodb/bson.typings";
 import AppDataSource from "../data-source";
-import { Plante } from "../entities/Plante";
+import { Plantes } from "../entities/Plante";
 
 class PlanteService {
-    private planteRepository = AppDataSource.getRepository(Plante);
+    private planteRepository = AppDataSource.getRepository(Plantes);
 
     async getAll() {
         console.log("PlanteService");
@@ -18,13 +18,13 @@ class PlanteService {
         // especially if the database operation takes a significant amount of time to execute.
         return this.planteRepository.findOneBy({id});
       }
-      async create(plante: Plante) {
+      async create(plante: Plantes) {
         console.log("PlanteService");
         // return AppDataSource.query(`INSERT INTO plante (title) VALUES ('${plante.title}');`);
         const newPlante = this.planteRepository.create(plante);
         return this.planteRepository.save(newPlante);
       }
-      async update(id: string, plante: Plante) {
+      async update(id: string, plante: Plantes) {
         console.log("PlanteService");
         // return AppDataSource.query(`UPDATE plante SET title = '${plante.title}' WHERE id = ${id};`);
         return this.planteRepository.update(id, plante);
