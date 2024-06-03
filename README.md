@@ -38,7 +38,7 @@ Initialization of  `tsconfig.json`  file
 
 tsc --init
 
-and in the file  `tsconfig.json`, and uncomment/modify this option  `"outDir": "./dist"` 
+In the file  `tsconfig.json`, uncomment/modify this option  `"outDir": "./dist"` 
 
 ----------
 
